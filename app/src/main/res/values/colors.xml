@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="White">#FFF</color>
+    <color name="black">#FFF</color>
+
+    <color name="transparent">#55000000</color>
+
+
+
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#992416</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="primary_material_dark">#4d6088</color>
+    <color name="statusBarColor">#3b4761</color>
+    <color name="accent_material_light">#33b5e5</color>
+
+</resources>

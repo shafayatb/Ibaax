@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/img_overview_icon"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitStart"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/area" />
+
+    <TextView
+        android:id="@+id/lbl_overview_titile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/img_overview_icon"
+        android:layout_toRightOf="@+id/img_overview_icon"
+        android:text="Area:"
+        android:typeface="sans"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/lbl_overview_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/lbl_overview_titile"
+        android:layout_toEndOf="@+id/img_overview_icon"
+        android:layout_toRightOf="@+id/img_overview_icon"
+        android:text="Small Text"
+        android:typeface="sans"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

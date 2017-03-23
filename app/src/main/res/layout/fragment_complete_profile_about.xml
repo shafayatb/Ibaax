@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aboutscrl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ibaax.com.ibaax.CompleteProfileAboutFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/place_about_autocomplete_fragment"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <fragment
+                android:id="@+id/aboutmap"
+                class="UI.WorkaroundMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_mapmarker" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Country"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:id="@+id/lbl_myCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Country"
+                    android:textSize="16sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:id="@+id/lbl_myState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    android:textSize="16sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="County/City"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/lbl_myCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:textSize="16sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Latitude/Longitude"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/lbl_myArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0, 0.0"
+                    android:textSize="16sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NeighbourHood"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:typeface="sans" />
+
+
+            <TextView
+                android:id="@+id/lbl_myNeighbourHood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NeighbourHood"
+                android:textSize="16sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zipcode / Postal Code"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:typeface="sans"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/txt_my_zipcode"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/txt3"
+                android:hint="Input Zip Code"
+                android:inputType="number"
+                android:typeface="sans"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Closest Street Address"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:typeface="sans" />
+
+            <EditText
+                android:id="@+id/txt_my_address"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/txt3"
+                android:hint="@string/content.hint.input_address"
+                android:inputType="text"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:id="@+id/lnr_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company Name"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:typeface="sans" />
+
+                <EditText
+                    android:id="@+id/txt_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/txt3"
+                    android:hint="Company Name"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/lbl_req_compnay_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compnay Name Is Required"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#a9ff0000"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="About"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:typeface="sans" />
+
+            <EditText
+                android:id="@+id/txt_about_desc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/txt3"
+                android:gravity="top"
+                android:hint="About"
+                android:inputType="text"
+                android:textSize="15sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_savemyAbout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_lightblue"
+            android:onClick="btnSaveUserLocation"
+            android:text="Done"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+    </LinearLayout>
+</ScrollView>
+

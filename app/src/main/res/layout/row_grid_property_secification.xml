@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnr_specificationcheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:padding="3dp"
+        android:visibility="gone">
+
+
+        <CheckBox
+            android:id="@+id/chk_specification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Property"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnr_specificationedittext"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/lbl_specification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Property"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:typeface="sans" />
+
+        <EditText
+            android:id="@+id/txt_specification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/txt3"
+            android:ellipsize="end"
+            android:inputType="text|textNoSuggestions"
+            android:maxLines="1"
+            android:typeface="sans" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnr_specificationnumbertext"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/lbl_specificationnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Property"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:typeface="sans" />
+
+        <EditText
+            android:id="@+id/txt_specificationnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/txt3"
+            android:digits="0123456789"
+            android:ellipsize="end"
+            android:inputType="numberDecimal"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:typeface="sans" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

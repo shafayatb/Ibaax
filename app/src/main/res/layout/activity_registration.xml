@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.ibaax.com.ibaax.RegistrationActivity">
+
+
+        <ImageView
+            android:id="@+id/img_sign_up_cross"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/cancel" />
+
+
+        <ImageView
+            android:id="@+id/img_sign_up_logo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ibaax_logo_final" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.iangclifton.android.floatlabel.FloatLabel
+                android:id="@+id/txt_first_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:inputType="text|textNoSuggestions"
+                android:layout="@layout/custom_float_label" />
+
+            <TextView
+                android:id="@+id/validate_Fname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#9aff0000"
+                android:textStyle="bold" />
+
+            <com.iangclifton.android.floatlabel.FloatLabel
+                android:id="@+id/txt_last_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:inputType="text|textNoSuggestions"
+                android:layout="@layout/custom_float_label" />
+
+            <TextView
+                android:id="@+id/validate_Lname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#9aff0000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/spn_resistration_malefemale"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/txt2"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spn_country_code"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/txt2" />
+
+                <EditText
+                    android:id="@+id/txt_phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/txt2"
+                    android:digits="0123456789"
+                    android:inputType="numberDecimal|phone"
+                    android:ems="10"
+                    android:hint="Phone Number"
+                    android:maxLength="12" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/validate_phnNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#9aff0000"
+                android:textStyle="bold" />
+
+
+            <com.iangclifton.android.floatlabel.FloatLabel
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:layout="@layout/custom_float_label" />
+
+            <TextView
+                android:id="@+id/validate_Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#9aff0000"
+                android:textStyle="bold" />
+
+            <com.iangclifton.android.floatlabel.FloatLabel
+                android:id="@+id/txt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout="@layout/custom_float_label" />
+
+            <TextView
+                android:id="@+id/validate_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#9aff0000"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/content.label.i_am"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spn_registration_usertype"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/txt2" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:checked="true"
+                android:clickable="true"
+                android:text="I agree to the Terms of Service and Privacy Policy of iBaax"
+                android:textSize="13sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_Sign_Up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_lightblue"
+            android:onClick="btnRegistration_click"
+            android:text="@string/sign_up"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/accunt_exists"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp"
+                android:typeface="sans" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:onClick="btnSignIn_click"
+                android:padding="2dp"
+                android:text="@string/login"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#45B8DB"
+                android:textSize="15sp"
+                android:typeface="sans" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

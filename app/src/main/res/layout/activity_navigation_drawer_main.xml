@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.baldysns.capedbaldy.materialdesigntest.activity.DrawerMainActivity"
+    tools:openDrawer="start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <!--ImageView
+                android:id="@+id/img_iBaax"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:contentDescription="@string/content.image.logo"
+                android:src="@drawable/logo"
+                android:visibility="gone" /-->
+
+            <TextView
+                android:id="@+id/lbl_drawer_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/lnr_google_searchbar"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_white_greyborder"
+                android:visibility="gone">
+
+                <fragment
+                    android:id="@+id/place_autocompletehome_fragment"
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/home_place_autocomplete"
+                layout="@layout/include_google_places_search"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <FrameLayout
+            android:id="@+id/container_body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.ibaax.com.ibaax.HomeFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp" />
+
+        <fragment
+            android:id="@+id/directoryFragment"
+            android:name="com.ibaax.com.ibaax.SearchDirectoryFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp" />
+
+        <fragment
+            android:id="@+id/recentFragment"
+            android:name="com.ibaax.com.ibaax.BrokeragesFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp" />
+
+        <fragment
+            android:id="@+id/shortlistFragment"
+            android:name="com.ibaax.com.ibaax.BrokeragesFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp" />
+
+        <fragment
+            android:id="@+id/savesearchFragment"
+            android:name="com.ibaax.com.ibaax.SaveSearchListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp" />
+
+        <fragment
+            android:id="@+id/notificationsFragment"
+            android:name="com.ibaax.com.ibaax.NotificationsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp" />
+
+        <fragment
+            android:id="@+id/postpropertyFragment"
+            android:name="com.ibaax.com.ibaax.PostPropertyFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp" />
+
+        <fragment
+            android:id="@+id/mypropertiesFragment"
+            android:name="com.ibaax.com.ibaax.MyPostedPropertiesFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp" />
+
+        <fragment
+            android:id="@+id/settingsFragment"
+            android:name="com.ibaax.com.ibaax.MySettingsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp" />
+
+        <fragment
+            android:id="@+id/brokerageFragment"
+            android:name="com.ibaax.com.ibaax.BrokeragesFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/fragment_navigation_drawer"
+        android:name="com.ibaax.com.ibaax.FragmentDrawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:visibility="gone"
+        app:layout="@layout/fragment_drawer"
+        tools:layout="@layout/fragment_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

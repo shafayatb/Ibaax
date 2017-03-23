@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9e9e9"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ibaax.com.ibaax.SaveVideoActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content.title.provide_your_video"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#43516e"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <EditText
+        android:id="@+id/txt_video_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/btn_upload_video"
+        android:layout_toStartOf="@+id/btn_upload_video"
+        android:hint="@string/content.hint.youtube_link"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_upload_video"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txt_video_link"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/btn_lightblue"
+        android:onClick="btn_Upload_Video"
+        android:text="@string/content.button.upload"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/err_valid_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txt_video_link"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#a9ff0000"
+        android:typeface="sans"
+        />
+
+
+    <UI.ExpandableHeightGridView
+        android:id="@+id/grid_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="false"
+        android:numColumns="1"
+        android:layout_marginTop="5dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        android:layout_below="@+id/err_valid_link" />
+</RelativeLayout>

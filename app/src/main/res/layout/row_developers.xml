@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:orientation="horizontal">
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/img_rowfindandevelopers_profile"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/avater" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:paddingLeft="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbl_rowfindandevelopers_name"
+                android:layout_width="wrap_content"
+                android:layout_weight=".9"
+                android:layout_height="25dp"
+                android:layout_marginBottom="5dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:typeface="sans"
+                android:text="developers at iBaax"
+                android:textColor="#56698f"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img_sendMessage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_weight=".1"
+                android:layout_gravity="end"
+                android:src="@drawable/heart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@drawable/customborder" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel_developers_list_phone_layout"
+            android:layout_marginTop="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_phone_blue" />
+
+            <TextView
+                android:id="@+id/lbl_rowfindandevelopers_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/imageView2"
+                android:layout_toRightOf="@+id/imageView2"
+                android:typeface="sans"
+                android:textColor="#56698f"
+                android:text="+8801670225611"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="2dp">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/ic_location_nopadding" />
+            <TextView
+                android:id="@+id/lbl_rowfindandevelopers_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area, City, Zip Code, State"
+                android:typeface="sans"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="14sp"
+
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID:"
+                android:typeface="sans"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/lbl_rowfindandevelopers_listening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:typeface="sans"
+                android:textSize="12sp"
+                android:text="4" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

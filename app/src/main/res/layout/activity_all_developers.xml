@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/lnr_resultsdevelopers_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#56698F"
+        android:elevation="2dp"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_cancel_searchresultdevelopers"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_action_back" />
+
+        <TextView
+            android:id="@+id/acc_title_resultsdevelopers"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Search Results"
+
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/acc_title_totalresultsdevelopers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textColor="#d3d3d3"
+            android:textSize="15sp"
+            android:typeface="sans" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView_all_developer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lnt_allfeaturedeveloper_busy"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/lnr_resultsdevelopers_action_bar"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/lnt_allfeaturedeveloper_busy"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

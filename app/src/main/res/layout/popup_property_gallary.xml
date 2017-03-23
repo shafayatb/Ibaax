@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#000"
+    android:orientation="vertical"
+
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/img_gallary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/property_no_photo" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btn_gallary_prev"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/img_gallary"
+        android:layout_alignStart="@+id/img_gallary"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_left_arrow"
+        android:text="Previous"
+        android:visibility="gone"
+        android:textColor="#fff" />
+
+    <ImageButton
+        android:id="@+id/btn_gallary_next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/img_gallary"
+        android:layout_alignRight="@+id/img_gallary"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/btn_gallary_prev"
+        android:background="@drawable/ic_next"
+        android:text="Next"
+        android:textColor="#fff" />
+</RelativeLayout>

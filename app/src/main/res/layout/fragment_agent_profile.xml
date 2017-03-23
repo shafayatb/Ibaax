@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ibaax.com.ibaax.AgentProfileFragment">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#428BCA"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView5"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView6"
+            android:layout_alignTop="@+id/imageView5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="70dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Agent Name"
+            android:id="@+id/textView9"
+            android:layout_alignTop="@+id/imageView5"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Buyer/Seller"
+            android:id="@+id/textView10"
+            android:layout_below="@+id/textView9"
+            android:layout_alignLeft="@+id/textView9"
+            android:layout_alignStart="@+id/textView9"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+    </RelativeLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#DDD"
+            android:minHeight="50dp"
+            android:layout_marginBottom="2dp"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageView7"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="My Profile"
+                android:textColor="#428BCA"
+                android:id="@+id/textView11"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView7"
+                android:layout_toEndOf="@+id/imageView7" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView8"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/abc_ic_go_search_api_mtrl_alpha"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#DDD"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp"
+            android:layout_marginBottom="2dp"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageView71"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+    android:textColor="#428BCA"
+                android:text="Change My Password"
+                android:id="@+id/textView111"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView71"
+                android:layout_toEndOf="@+id/imageView71" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView81"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/abc_ic_go_search_api_mtrl_alpha"
+                />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

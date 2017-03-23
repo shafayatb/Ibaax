@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/background_border"
+    android:id="@+id/lnr_add_photo_activity"
+    android:orientation="vertical">
+
+        <UI.BlockImageView
+
+            android:id="@+id/img_add_photos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/add_property_img" />
+
+</LinearLayout>

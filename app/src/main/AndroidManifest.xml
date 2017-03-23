@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ibaax.com.ibaax"
+    android:installLocation="auto"
+    android:versionCode="6"
+    android:versionName="1.05">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/CustomActionBarTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_registration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MessageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_message"
+            android:screenOrientation="portrait" />
+
+        <!-- Goolge API Key -->
+        <!--
+            meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDsD1D-wJUN0WBu1toIdzDhhiJJ0x9GoyM" /
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- debug -->
+        <!--
+            meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDsD1D-wJUN0WBu1toIdzDhhiJJ0x9GoyM"/
+        -->
+        <!-- release -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${google_map_key}" />
+        <!-- Facebook API Key -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider850435015073918"
+            android:exported="true" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".TutorialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeveloperProfileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_developer_profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_change_password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PostAPropertyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Post A Property"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddPhotoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Property Photos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PostPropertyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PropertySetSpecificationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Property Specification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditPhotoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Edit Photo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyPropertyEditBasicInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AgentProfileActivity2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PropertyDetailActivity2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_property_detail2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NavigationDrawerMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyPostedPropertyDetailActivity2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TabRecentlyViewedActivity"
+            android:label="@string/title_activity_tab_recently_viewed"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme.NoActionBar" />
+        <activity
+            android:name=".TabShorlistActivity"
+            android:label="@string/title_activity_tab_shorlist"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme.NoActionBar" />
+        <activity
+            android:name=".PropertyStreetViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyProfileActivity2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CropImageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditMyProfileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity android:name=".EditMyLocationActivity" />
+        <activity
+            android:name=".SearchPropertyForResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/Search_Property_For_Result_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchDirectoryForResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompleteProfileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_complete_profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme.NoActionBar" />
+        <activity
+            android:name=".CropCoverImageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyProfileSetSpecialityActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/MyProfileSetSpecialityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SaveVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/SaveVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyProfileSetServiceAreaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/MyProfileSetServiceAreaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyPropertySaveVideo"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/MyPropertySaveVideo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SaveSearchResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WebPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

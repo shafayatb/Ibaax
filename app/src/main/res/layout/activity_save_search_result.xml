@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ibaax.com.ibaax.SaveSearchResultActivity">
+
+    <LinearLayout
+        android:id="@+id/lnr_map_save_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_save_search_maplist"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/save_search_map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_save_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_save_search_maplist"
+        android:dividerHeight="3dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_save_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_save_search_info_window"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_above="@+id/btn_save_search_maplist"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_save_search_maplist"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/btn_white_greyborder"
+        android:gravity="end|center"
+        android:onClick="btn_Map_List"
+        android:padding="15dp"
+        android:text="MAP"
+        android:textAllCaps="true"
+        android:textColor="#57b1ff"
+        android:textSize="16sp"
+        android:typeface="sans" />
+
+</RelativeLayout>

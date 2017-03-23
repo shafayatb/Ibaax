@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f9f7f7"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+
+
+            <LinearLayout
+                android:id="@+id/lnrPostPropertyTransactionType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnFromDetailSale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight=".5"
+                    android:background="#56698F"
+                    android:text="For Sale"
+                    android:textColor="#fff"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/btnFromDetailRent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/btn_white_blackborder"
+                    android:text="For Rent"
+                    android:textColor="#000"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lbl_listing_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="PROPERTY LISTING TYPE"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:typeface="sans" />
+
+            <Spinner
+                android:id="@+id/ddlListingType"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/txt3" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_propertytype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_residential"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/content.radio.residentail" />
+
+                <RadioButton
+                    android:id="@+id/radio_commercial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/content.radio.commercial" />
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="PROPERTY TYPE"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:typeface="sans" />
+
+            <Spinner
+                android:id="@+id/ddlPropertyType"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/txt3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="BED ROOMS"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:typeface="sans" />
+
+                    <Spinner
+                        android:id="@+id/spn_postproperty_bedno"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/txt3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewd1d3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="BATH ROOMS"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <Spinner
+                        android:id="@+id/spn_postproperty_bathno"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/txt3" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <UI.ExpandableHeightGridView
+                android:id="@+id/grid_postproperty_noofbedrooms"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:isScrollContainer="false"
+                android:numColumns="10"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:visibility="gone" />
+
+
+            <UI.ExpandableHeightGridView
+                android:id="@+id/grid_postproperty_noofbathrooms"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:isScrollContainer="false"
+                android:numColumns="10"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblpostPropertyPriceTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PRICE"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <CheckBox
+                    android:id="@+id/chk_cont_for_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:text="Contact For Price" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txt_postproperty_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/txt3"
+                    android:digits="0123456789"
+                    android:hint="Price"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:maxLength="11"
+                    android:typeface="sans" />
+
+                <Spinner
+                    android:id="@+id/spn_postproperty_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/txt3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnr_renttype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:animateLayoutChanges="true"
+                android:baselineAligned="false"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Rent Type"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <Spinner
+                        android:id="@+id/spn_postproperty_renttype"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/txt3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Available From"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/txt_postproperty_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/txt3"
+                        android:drawableEnd="@drawable/calenderleft"
+                        android:drawableRight="@drawable/calenderleft"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:singleLine="true"
+                        android:hint="Start Date"
+                        android:inputType="textNoSuggestions"
+                        android:typeface="sans" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblpostPropertyDeposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Deposit"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/lnr_postproperty_deposit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/txt_postproperty_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/txt3"
+                    android:digits="0123456789"
+                    android:hint="Amount"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:maxLength="13"
+                    android:typeface="sans" />
+
+                <Spinner
+                    android:id="@+id/spn_postproperty_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/txt3" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Area Size"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:id="@+id/txt_postproperty_builtin"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/txt3"
+                    android:digits="0123456789"
+                    android:hint="Size"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:typeface="sans" />
+
+                <Spinner
+                    android:id="@+id/spn_postproperty_builtin"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/txt3" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Land Size"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:id="@+id/txt_postproperty_lotsize"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/txt3"
+                    android:digits="0123456789"
+                    android:singleLine="true"
+                    android:hint="Size"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:typeface="sans" />
+
+                <Spinner
+                    android:id="@+id/spn_postproperty_lotsize"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/txt3"
+
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="YEAR BUILT"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+            <Spinner
+                android:id="@+id/spn_postproperty_yearbuilt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/txt3"
+                android:typeface="sans" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="PROPERTY TITLE"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+            <EditText
+                android:id="@+id/txt_postproperty_propertytitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/txt3"
+                android:hint="Title"
+                android:singleLine="true"
+                android:maxLength="120"
+                android:typeface="sans" />
+
+
+            <TextView
+                android:id="@+id/validate_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#9aff0000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROPERTY DESCRIPTION"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+            <EditText
+                android:id="@+id/txt_postproperty_desc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/txt3"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Input Property Description..."
+                android:inputType="textMultiLine"
+                android:maxLength="3000"
+                android:typeface="sans" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_postproperty_steptwo_next"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="#56698f"
+            android:elevation="2dp"
+            android:text="@string/content.button.save_continue"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+    </LinearLayout>
+
+</ScrollView>

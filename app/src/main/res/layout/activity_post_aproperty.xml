@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context="com.ibaax.com.ibaax.PostAPropertyActivity"
+
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#56698F"
+        android:padding="10dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:layout_above="@+id/btn_publish_to_marketplace">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/check_icon"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="You have Successfully Created\nYour Property Posting"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:typeface="sans"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Before you posting your property to the iBaax Marketplace, the more information you can add to your property, the more chance you have of selling/ renting your property."
+            android:typeface="sans"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:textColor="#fff"
+
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="You can now...."
+            android:typeface="sans"
+
+            android:textColor="#fff"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Add Photo"
+            android:onClick="btn_Post_Property_Photo"
+            android:textColor="#56698F"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_white"
+            android:id="@+id/btn_add_photo"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Add Specification"
+            android:layout_marginTop="10dp"
+            android:onClick="btn_Post_Property_Specification"
+            android:textColor="#56698F"
+            android:background="@drawable/btn_white"
+            android:id="@+id/btn_add_specification"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_publish_to_marketplace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/btn_white_greyborder"
+        android:text="Publish To MarketPlace"
+        android:onClick="btn_Post_Property_Publish"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="#56698F"/>
+
+
+</RelativeLayout>

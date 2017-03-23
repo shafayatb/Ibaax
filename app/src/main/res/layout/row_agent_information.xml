@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnr_agentinfo"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lbl_agentinfo_title"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Experience (Years)"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text=":"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/lbl_agentinfo_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="10"
+            android:textColor="#60aaff"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

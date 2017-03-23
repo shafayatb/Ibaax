@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/content.label.language"
+            android:textSize="16sp"
+            android:typeface="sans"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/spnSettingsLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/txt3"
+            android:typeface="sans"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/content.label.currency"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+        <Spinner
+            android:id="@+id/spnSettingsCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/txt3"
+            android:typeface="sans" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/content.label.measurement"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+        <Spinner
+            android:id="@+id/spnSettingsMesurement"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/txt3"
+            android:typeface="sans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="App Settings"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:typeface="sans" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/content.switch.push_notification"
+                android:textSize="16sp"
+                android:typeface="sans" />
+
+            <Switch
+                android:id="@+id/switch_push"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_terms"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:text="@string/content.button.termncondition"
+            android:textAllCaps="false"
+            android:textColor="#88000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:typeface="sans" />
+
+        <Button
+            android:id="@+id/btn_faq"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:text="@string/content.button.faq"
+            android:textAllCaps="false"
+            android:textColor="#88000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:typeface="sans" />
+
+
+        <Button
+            android:id="@+id/btn_subs"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:text="@string/content.button.subscription"
+            android:textAllCaps="false"
+            android:textColor="#88000000"
+            android:textSize="16sp"
+            android:typeface="sans"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_cng_pass"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:text="@string/content.button.change_password"
+            android:textAllCaps="false"
+            android:textColor="#88000000"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:text="@string/content.button.logout"
+            android:textAllCaps="false"
+            android:textColor="#88000000"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+    </LinearLayout>
+</ScrollView>

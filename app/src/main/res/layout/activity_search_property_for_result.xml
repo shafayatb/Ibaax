@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.ibaax.com.ibaax.SearchPropertyForResultActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_filter"
+        android:background="#e7e7e7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Filter Your Search Criteria"
+                android:textAllCaps="true"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_white"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <Switch
+                    android:id="@+id/switch_sale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:padding="5dp"
+                    android:text="@string/content.switch.for_sale"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    android:typeface="sans" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ccc" />
+
+                <LinearLayout
+                    android:id="@+id/lnr_searchsale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <UI.ExpandableHeightGridView
+                        android:id="@+id/gridview_searchproperty_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="2dp"
+                        android:isScrollContainer="false"
+                        android:numColumns="2"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/price_range"
+                        android:textAllCaps="true"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spn_min_price"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="-"
+                            android:textSize="22sp" />
+
+                        <Spinner
+                            android:id="@+id/spn_max_price"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_white"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <Switch
+                    android:id="@+id/switch_rent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:padding="5dp"
+                    android:text="@string/content.switch.for_rent"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    android:typeface="sans" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ccc" />
+
+                <LinearLayout
+                    android:id="@+id/lnr_search_rent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/homeleft"
+                        android:drawablePadding="5dp"
+                        android:drawableStart="@drawable/homeleft"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/rent_type"
+                        android:textAllCaps="true"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <UI.ExpandableHeightGridView
+                        android:id="@+id/gridview_searchproperty_renttype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="2dp"
+                        android:isScrollContainer="false"
+                        android:numColumns="2"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/calenderleft"
+                        android:drawablePadding="5dp"
+                        android:drawableStart="@drawable/calenderleft"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/available_from"
+                        android:textAllCaps="true"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/txt3"
+                        android:ems="10"
+                        android:hint="@string/select_date"
+                        android:inputType="date"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/rent_rate"
+                        android:textAllCaps="true"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <Spinner
+                            android:id="@+id/spn_rent_min_price"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:text="-"
+                            android:textSize="22sp" />
+
+                        <Spinner
+                            android:id="@+id/spn_rent_max_price"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_white"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/property_type"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/chk_residential"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/content.chkbox.type_residential"
+                    android:textAllCaps="true"
+                    android:typeface="sans" />
+
+                <UI.ExpandableHeightGridView
+                    android:id="@+id/gridview_searchproperty_residentialtype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="2dp"
+                    android:isScrollContainer="false"
+                    android:numColumns="2"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="2dp" />
+
+                <CheckBox
+                    android:id="@+id/chk_commercial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/content.chkbox.type_commercial"
+                    android:textAllCaps="true"
+                    android:typeface="sans" />
+
+                <UI.ExpandableHeightGridView
+                    android:id="@+id/gridview_searchproperty_commercialtype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="2dp"
+                    android:isScrollContainer="false"
+                    android:numColumns="2"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="2dp" />
+
+                <Button
+                    android:id="@+id/btn_more_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:onClick="btn_More_Property"
+                    android:text="@string/more_property_type"
+                    android:textAllCaps="false"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/beds"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <UI.ExpandableHeightGridView
+                    android:id="@+id/grid_postproperty_noofbedrooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_margin="5dp"
+                    android:isScrollContainer="false"
+                    android:numColumns="8"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth" />
+
+
+                <TextView
+                    android:id="@+id/textViewd1d3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/baths"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <UI.ExpandableHeightGridView
+                    android:id="@+id/grid_postproperty_noofbathrooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_margin="5dp"
+                    android:isScrollContainer="false"
+                    android:numColumns="8"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/build_size"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spn_min_area"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="-"
+                        android:textSize="22sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_max_area"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnr_search_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/background_white"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:padding="5dp"
+                    android:text="@string/lot_plot_size"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spn_min_lot"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="-"
+                        android:textSize="22sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_max_lot"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:padding="5dp"
+                    android:text="@string/year_built"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spn_min_year_built"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="-"
+                        android:textSize="22sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_max_year_built"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/content.label.keywords"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <EditText
+                    android:id="@+id/txt_search_property_keywords"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:hint="@string/content.hint.search_keywords"
+                    android:inputType="text"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:padding="5dp"
+                    android:text="@string/posted_by"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <CheckBox
+                            android:id="@+id/chk_agent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/agent"
+                            android:typeface="sans" />
+
+
+                        <CheckBox
+                            android:id="@+id/chk_developer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/developer"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/chk_owner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/owner"
+                            android:typeface="sans" />
+
+                        <CheckBox
+                            android:id="@+id/chk_brokerage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/brokerage"
+                            android:typeface="sans" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:padding="5dp"
+                    android:text="@string/content.label.include"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <CheckBox
+                        android:id="@+id/chk_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/content.chk.has_photo"
+                        android:typeface="sans" />
+
+                    <CheckBox
+                        android:id="@+id/chk_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/content.chk.has_video"
+                        android:typeface="sans" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_search_more"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_tranparent"
+                android:padding="5dp"
+                android:text="@string/show_more"
+                android:textSize="14sp"
+                android:typeface="sans" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#56698f"
+        android:onClick="btn_filter"
+        android:text="@string/content.button.apply_filter"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:typeface="sans" />
+</RelativeLayout>

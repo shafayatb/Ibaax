@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AgentProfileActivity2">
+
+
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/ic__action_favorite_outline"
+        android:orderInCategory="100"
+        android:title="Favorite"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_menu_share"
+        android:orderInCategory="100"
+        android:title="Share"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_flag"
+        android:icon="@drawable/ic_action_ic_flag_blue"
+        android:orderInCategory="100"
+        android:title="Report"
+        app:showAsAction="always" />
+
+</menu>

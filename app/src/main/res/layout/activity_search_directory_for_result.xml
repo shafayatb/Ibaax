@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_filter"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/content.label.filter_by"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <UI.ExpandableHeightGridView
+            android:id="@+id/grid_directory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:isScrollContainer="false"
+            android:numColumns="1"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" />
+
+        <Spinner
+            android:id="@+id/spn_agent_directory"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/txt3"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/content.label.keywords"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <EditText
+            android:id="@+id/txt_agent_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/txt3"
+            android:hint="@string/content.hint.keyword"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:typeface="sans" />
+
+        <UI.TagView.TagContainerLayout
+            android:id="@+id/tag_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:container_background_color="#00000000"
+            app:container_border_color="#00000000"
+            app:container_border_radius="0dp"
+            app:container_border_width="4dp"
+            app:container_enable_drag="false"
+            app:horizontal_interval="10dp"
+            app:tag_background_color="#428bca"
+            app:tag_border_color="#428bca"
+            app:tag_clickable="true"
+            app:tag_corner_radius="5dp"
+            app:tag_max_length="200"
+            app:tag_text_color="#ffffff"
+            app:tag_theme="none"
+            app:vertical_interval="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/content.label.specialities"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/content.label.spoken_languages"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/content.label.service_area"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/txt_agent_area"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/txt3"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_tranparent"
+        android:onClick="btn_directory_filter"
+        android:text="@string/filter"
+        android:textColor="#33b5e5"
+        android:textSize="16sp"
+        android:typeface="sans" />
+</RelativeLayout>

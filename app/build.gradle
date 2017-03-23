@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.0"
+
+    defaultConfig {
+        applicationId "com.ibaax.com.ibaax"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 6
+        versionName "1.05"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [google_map_key: "AIzaSyDsD1D-wJUN0WBu1toIdzDhhiJJ0x9GoyM"]
+            shrinkResources true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [google_map_key: "AIzaSyDNACHQTLve2t6JeR3qZEUSP2WVbQNJVxc"]
+            shrinkResources true
+        }
+
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+repositories { mavenCentral() }
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-v4:22.0.0'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile 'com.android.support:cardview-v7:22.2.0'
+    compile 'com.mcxiaoke.volley:library:1.0.17'
+    compile 'com.google.android.gms:play-services-maps:9.0.2'
+    compile 'com.google.android.gms:play-services-location:9.0.2'
+    compile 'com.iangclifton.android:floatlabel:1.0.4'
+    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile('org.apache.httpcomponents:httpmime:4.3.5') {
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+    compile 'org.apache.httpcomponents:httpclient-android:4.3.5'
+    compile 'com.github.mrengineer13:snackbar:1.2.0'
+    compile 'com.android.support:design:22.2.1'
+    compile 'com.github.bluejamesbond:textjustify-android:2.1.1'
+    compile 'com.isseiaoki:simplecropview:1.0.16'
+    compile 'com.wdullaer:materialdatetimepicker:1.4.2'
+}

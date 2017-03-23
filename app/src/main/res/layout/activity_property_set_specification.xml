@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.ibaax.com.ibaax.PropertySetSpecificationActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:text="SELECT YOUR PROPERTY SPECIFICATIONS"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#56698f"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#E9E3FC"
+                android:padding="5dp"
+                android:text="INDOOR"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <UI.ExpandableHeightGridView
+                android:id="@+id/gridview_property_indoor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="2dp"
+                android:isScrollContainer="false"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#E9E3FC"
+                android:padding="5dp"
+                android:text="OUTDOOR"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <UI.ExpandableHeightGridView
+                android:id="@+id/gridview_property_outdoor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="2dp"
+                android:isScrollContainer="false"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#E9E3FC"
+                android:padding="5dp"
+                android:text="FURNISHING"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <UI.ExpandableHeightGridView
+                android:id="@+id/gridview_property_furnishing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="2dp"
+                android:isScrollContainer="false"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#E9E3FC"
+                android:padding="5dp"
+                android:text="PARKING"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <UI.ExpandableHeightGridView
+                android:id="@+id/gridview_property_parking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="2dp"
+                android:isScrollContainer="false"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#E9E3FC"
+                android:padding="5dp"
+                android:text="VIEWS"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <UI.ExpandableHeightGridView
+                android:id="@+id/gridview_property_views"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="2dp"
+                android:isScrollContainer="false"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#E9E3FC"
+                android:padding="5dp"
+                android:text="LOCAL AMENITIES"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <UI.ExpandableHeightGridView
+                android:id="@+id/gridview_property_localamen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="2dp"
+                android:isScrollContainer="false"
+                android:numColumns="1"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_save_specification"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#56698f"
+            android:layout_margin="15dp"
+            android:textColor="#fff"
+            android:onClick="btn_Save_Specifications"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:text="Save" />
+
+
+    </LinearLayout>
+</ScrollView>

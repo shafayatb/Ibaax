@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyPostedPropertyDetailActivity2">
+    <item
+        android:id="@+id/action_basic"
+        android:orderInCategory="100"
+        android:title="Edit Basic Info" />
+    <item
+        android:id="@+id/action_photos"
+        android:orderInCategory="100"
+        android:title="Upload Photos" />
+    <item
+        android:id="@+id/action_specifications"
+        android:orderInCategory="100"
+        android:title="Edit Specifications" />
+    <item
+        android:id="@+id/action_video"
+        android:orderInCategory="100"
+        android:title="Upload Videos" />
+    <item
+        android:id="@+id/action_publish"
+        android:orderInCategory="100"
+        android:title="Publish" />
+    <item
+        android:id="@+id/action_unpublish"
+        android:orderInCategory="100"
+        android:title="Unpublish"
+        android:visible="false" />
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:title="Share" />
+    <item
+        android:id="@+id/action_delete"
+        android:orderInCategory="100"
+        android:title="Delete" />
+
+    <item
+        android:id="@+id/action_publish_staus"
+        android:icon="@drawable/ic_action_unpublished"
+        android:orderInCategory="100"
+        android:title="@string/content.menu.publish_status"
+        app:showAsAction="always" />
+
+</menu>

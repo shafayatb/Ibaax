@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="20dp"
+    android:background="#fff"
+    android:orientation="horizontal">
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/img_rowfindanagent_profile"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avater" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:paddingEnd="0dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="0dp"
+        android:paddingStart="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbl_rowfindanagent_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".9"
+                android:text="Agent Name"
+                android:textColor="#56698F"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img_fav_agent"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_gravity="end"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:layout_weight=".1"
+                android:src="@drawable/heart" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lbl_rowfindanagent_companyname"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="Agent at iBaax"
+            android:textColor="#999"
+            android:textSize="12sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@drawable/customborder" />
+
+        <RelativeLayout
+            android:id="@+id/rel_agent_list_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_phone_blue" />
+
+            <TextView
+                android:id="@+id/lbl_rowfindanagent_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/imageView2"
+                android:layout_toRightOf="@+id/imageView2"
+                android:text="+8801670225611"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#56698f"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbl_rowfindanagent_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area, City, Zip Code, State"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="12sp"
+
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID:"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/lbl_rowfindanagent_listening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="4"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyProfileActivity2">
+    <item
+        android:id="@+id/action_myprofile_info"
+        android:orderInCategory="100"
+        android:title="Edit Profile Info" />
+
+    <item
+        android:id="@+id/action_myprofile_speciality"
+        android:orderInCategory="100"
+        android:title="Edit Speciality" />
+    <item
+        android:id="@+id/action_myprofile_area"
+        android:orderInCategory="100"
+        android:title="Edit Service Area" />
+    <item
+        android:id="@+id/action_myprofile_video"
+        android:orderInCategory="100"
+        android:title="Upload Video" />
+
+
+    <item
+        android:id="@+id/action_myprofile_share"
+        android:icon="@drawable/ic_action_share"
+        android:orderInCategory="100"
+        android:title="Share"
+        app:showAsAction="always" />
+
+</menu>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:weightSum="1"
+        tools:context="com.ibaax.com.ibaax.MessageActivity">
+
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Property Title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#56698F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txt_Message_Name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/txt2"
+            android:hint="Your Name"
+            android:inputType="text"
+            android:textColor="#000"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spn_country_code"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/txt2" />
+
+            <EditText
+                android:id="@+id/txt_Message_Phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/txt2"
+                android:digits="0123456789"
+                android:ems="10"
+                android:hint="Your Phone Number"
+                android:inputType="numberDecimal|phone"
+                android:maxLength="12"
+                android:textColor="#000"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txt_Message_Email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/txt2"
+            android:ems="10"
+            android:hint="Your Email"
+            android:inputType="textEmailAddress"
+            android:textColor="#000"
+            android:typeface="sans" />
+
+        <EditText
+            android:id="@+id/txt_Message_Msg"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.17"
+            android:background="@drawable/txt2"
+            android:ems="40"
+            android:gravity="top"
+            android:hint="Message"
+            android:inputType="textMultiLine"
+            android:textColor="#000"
+            android:typeface="sans" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/chkWindows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Yes, I wish to receive occasional emails about special offers, new listings and exclusive promotions. I can cancel my subscription at any time."
+                android:typeface="sans" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_lightblue"
+            android:onClick="btnSendMessage_click"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Send Message"
+            android:textColor="#fff"
+            android:typeface="sans" />
+    </LinearLayout>
+</ScrollView>
