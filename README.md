@@ -1,6 +1,6 @@
 # IbaaxAndroid
 
-Note: This project is no longer supported because iBaax shutdown in October, 2016. If you want a similar project made hit me up on upwork https://www.upwork.com/o/profiles/users/_~0180ce95ea1b6e9f86/
+Note: This project is no longer supported because iBaax shutdown in October, 2016.
 
 With iBaax Global Real Estate Marketplace, you can post a property for sale, for rent, buy a new property, and find an apartment to rent, find an agent, developers, brokerages and explore new neighborhoods.
 
@@ -24,6 +24,6 @@ Key Features:
 
 - Contact: Property owners, agents, brokerages, developers instantly - send message, email and even make call.
 
-Google Play Link: https://play.google.com/store/apps/details?id=com.ibaax.com.ibaax
+Link: https://apkpure.com/ibaax-real-estate-marketplace/com.ibaax.com.ibaax
 
 Website: www.ibaax.com
